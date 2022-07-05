@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  animated_text_kit: ^4.2.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -51,6 +52,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/images/space_home.png
+    - assets/images/space.gif
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
