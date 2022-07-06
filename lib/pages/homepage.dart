@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:spaceInvader/pages/game_page.dart';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 class Homepage extends StatefulWidget{
   @override
@@ -16,7 +18,7 @@ class _HomePageState extends State<Homepage>{
       title: 'Flutter Tutorial',
       home: Scaffold(
         body: Stack(
-          children: <Widget>[
+          children: [
             Container(
                 decoration: new BoxDecoration(
                   image: new DecorationImage(image: new AssetImage("assets/images/space.gif"), fit: BoxFit.cover,),
@@ -28,7 +30,7 @@ class _HomePageState extends State<Homepage>{
 
               child: DefaultTextStyle(
                 style: const TextStyle(
-                  fontSize: 60,
+                  fontSize: 75,
                   color: Colors.white,
                   shadows: [
                     Shadow(
@@ -57,9 +59,11 @@ class _HomePageState extends State<Homepage>{
                     primary: Colors.white10
                 ),
                 onPressed: () {
+                  //HapticFeedback.heavyImpact();
                   Navigator.push(context,
                     MaterialPageRoute(builder: (context) {
-                      return _GamePageState();
+                      Vibrate.vibrate();
+                      return GamePage();
                     }),
                   );
                 },),

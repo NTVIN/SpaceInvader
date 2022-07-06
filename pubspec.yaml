@@ -1,4 +1,4 @@
-name: spaceinvader
+name: spaceInvader
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -30,6 +30,10 @@ dependencies:
   flutter:
     sdk: flutter
   animated_text_kit: ^4.2.2
+  sensors_plus: ^1.3.2
+  flutter_vibrate: ^1.3.0
+
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -55,6 +59,7 @@ flutter:
   assets:
     - assets/images/space_home.png
     - assets/images/space.gif
+    - assets/images/pixil-frame-0.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
