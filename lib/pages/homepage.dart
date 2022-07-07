@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:spaceInvader/pages/game_page.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
+import 'package:vibration/vibration.dart';
 
 class Homepage extends StatefulWidget{
   @override
@@ -62,7 +62,7 @@ class _HomePageState extends State<Homepage>{
                   //HapticFeedback.heavyImpact();
                   Navigator.push(context,
                     MaterialPageRoute(builder: (context) {
-                      Vibrate.vibrate();
+                      Vibration.vibrate(duration: 500);
                       return GamePage();
                     }),
                   );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Spaceship extends StatelessWidget{
+class Stone extends StatelessWidget{
 
 
   @override
@@ -8,7 +8,7 @@ class Spaceship extends StatelessWidget{
     return Container(
 
         child: Image.asset(
-            'assets/images/spaceship.png',
+          'assets/images/spaceship.png',
         )
     );
 
