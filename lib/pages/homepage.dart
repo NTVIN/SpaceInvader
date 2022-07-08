@@ -29,8 +29,10 @@ class _HomePageState extends State<Homepage>{
 
 
               child: DefaultTextStyle(
+                textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 75,
+
                   color: Colors.white,
                   shadows: [
                     Shadow(
