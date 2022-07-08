@@ -52,11 +52,14 @@ class _HomePageState extends State<Homepage>{
             ),
             Align(
               alignment: Alignment.bottomCenter,
+
               child: ElevatedButton(
 
                 child: Text('PLAY'),
                 style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(120,70),
                     primary: Colors.white10
+
                 ),
                 onPressed: () {
                   //HapticFeedback.heavyImpact();

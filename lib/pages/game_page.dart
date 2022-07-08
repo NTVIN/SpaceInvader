@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:spaceInvader/objects/spaceship.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 import 'package:vibration/vibration.dart';
+import 'package:better_sound_effect/better_sound_effect.dart';
 
 class GamePage extends StatefulWidget {
   @override
@@ -11,16 +12,18 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
-  double posX = 150, posY = 250;
+  double posX = 100, posY = 250;
 
-  double stoneX= 50, stoneY=0;
+  double stoneX = 50, stoneY = 0;
 
   late Timer _timer;
 
-  moveStone(){
-    setState(()  {
-      stoneY+=10;
-    },);
+  moveStone() {
+    setState(
+      () {
+        stoneY += 10;
+      },
+    );
   }
 
   @override
@@ -31,8 +34,6 @@ class _GamePageState extends State<GamePage> {
     });
     super.initState();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -51,18 +52,22 @@ class _GamePageState extends State<GamePage> {
             stream: SensorsPlatform.instance.gyroscopeEvents,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                posX = posX + (snapshot.data!.y * 40);
-                posY = posY + (snapshot.data!.x * 40);
+                posX = posX + (snapshot.data!.y * 15);
+                posY = posY + (snapshot.data!.x * 15);
                 Vibration.vibrate(
-                    pattern: [2000, 1000, 2000, 3000], intensities: [1]);
+                    //pattern: [2000, 1000, 2000, 3000], intensities: [1]
+                    );
                 //Vibrate.vibrateWithPauses(pauses);
               }
               return Transform.translate(
                 offset: Offset(posX, posY),
                 child: Spaceship(),
-
               );
-            })
+            }),
+        Container(
+            child: Image.asset(
+          'assets/images/spaceship.png',
+        )),
       ],
     ));
   }
