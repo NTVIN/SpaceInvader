@@ -7,8 +7,8 @@ import 'package:vibration/vibration.dart';
 import 'package:better_sound_effect/better_sound_effect.dart';
 
 class Stone {
-  Stone(this.x, this.y);
-  int x = 50, y = 0;
+
+  double stoneX = 50, stoneY = 0;
   var box = SizedBox(
     height: 200,
     width: 250,
@@ -16,8 +16,8 @@ class Stone {
   );
 
   void move() {
-    y += 10;
-    //print("$stoneX,$stoneY");
+    stoneY += 30;
+    print("$stoneX,$stoneY");
   }
 }
 
@@ -27,8 +27,8 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
-  List<Stone> stones = [Stone(5,0),Stone(10,0),Stone(15,0),Stone(28,0) ];
-  Stone stone = Stone(50,0);
+  List<Stone> stones = [Stone()];
+  Stone stone = Stone();
   double posX = 100, posY = 250;
 
   late Timer _timer;
@@ -36,9 +36,8 @@ class _GamePageState extends State<GamePage> {
   moveStone() {
     setState(
       () {
-        for(Stone stone in stones){
-          stone.move();
-        }
+        stone.move();
+
       },
     );
   }
@@ -82,15 +81,14 @@ class _GamePageState extends State<GamePage> {
               );
             }),
         //moveStone(Image.asset( 'assets/images/stone.png')),
-
         Positioned(
-            left: stone.x,
-            top: stone.y,
+            left: stone.stoneX,
+            top: stone.stoneY,
 
             child: Container(
               child: stone.box,
-            ))
 
+            )),
       ],
     ));
   }
