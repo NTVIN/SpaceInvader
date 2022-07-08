@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:spaceInvader/pages/game_page.dart';
 import 'package:vibration/vibration.dart';
+import 'package:better_sound_effect/better_sound_effect.dart';
 
 class Homepage extends StatefulWidget{
   @override
@@ -11,7 +12,20 @@ class Homepage extends StatefulWidget{
 
 
 class _HomePageState extends State<Homepage>{
+ final soundEffect = BetterSoundEffect();
+  int? soundId;
 
+
+  @override
+  void initState() {
+    super.initState();
+
+    /*
+    Future.microtask(() async {
+      soundId = await soundEffect.loadAssetAudioFile("assets/sounds/megasus.mp3");
+    });
+     */
+  }
   @override
  Widget build(BuildContext context){
     return  MaterialApp(
@@ -68,6 +82,12 @@ class _HomePageState extends State<Homepage>{
                   Navigator.push(context,
                     MaterialPageRoute(builder: (context) {
                       Vibration.vibrate(duration: 500);
+                      /*
+                      if (soundId != null) {
+                        soundEffect.play(soundId!);
+                      }
+                      */
+
                       return GamePage();
                     }),
                   );

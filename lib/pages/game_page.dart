@@ -81,6 +81,7 @@ class _GamePageState extends State<GamePage> {
               );
             }),
         //moveStone(Image.asset( 'assets/images/stone.png')),
+
         Positioned(
             left: stone.stoneX,
             top: stone.stoneY,

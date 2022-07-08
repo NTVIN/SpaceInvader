@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spaceInvader/pages/gameOver.dart';
+import 'package:spaceInvader/pages/game_page.dart';
 import 'package:spaceInvader/pages/homepage.dart';
 
 void main() {

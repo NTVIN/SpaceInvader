@@ -43,8 +43,17 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.9.3"
   flutter_test:
     sdk: flutter
+
+
+flutter_icons:
+  image_path: "assets/images/logo.png"
+  android: true
+
+
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -63,6 +72,7 @@ flutter:
     - assets/images/space.gif
     - assets/images/spaceship.png
     - assets/images/stone.png
+    - assets/sounds/megasus.mp3
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
