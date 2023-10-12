@@ -1,6 +1,7 @@
 # spaceinvader
 
-A new Flutter project.
+A fun project made with flutter in about 4 days from ground up. It is part of the ÜK-335 "Moblie-Apps entwickeln". 
+The game Space Invaders is an old school shoot em up game. 
 
 ## Getting Started
 
