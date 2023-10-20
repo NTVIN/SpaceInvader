@@ -1,7 +1,8 @@
 # spaceinvader
 
 A fun project made with flutter in about 4 days from ground up. It is part of the ÜK-335 "Moblie-Apps entwickeln". 
-The game Space Invaders is an old school shoot em up game. 
+The game Space Invaders is an old school shoot em up game. Instead of the classic joystick the phone uses the gyroscope no navigate 
+through obsticales, which are spawning from the top.
 
 ## Getting Started
 
